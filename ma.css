@@ -1,0 +1,28 @@
+.maindiv{
+background:yellow;
+text-align: center;
+padding:2%;
+}
+.edudiv{
+  display: flex;
+  background: pink;
+  justify-content: space-between;
+}
+.sscdiv{
+  width: 30%;
+  background: skyblue;
+  text-align: center;
+  border: solid black;
+}
+.interdiv{
+  width: 30%;
+  background: green;
+  text-align: center;
+  border: solid black;
+}
+.degreediv{
+  width: 30%;
+  background: red;
+  text-align: center;
+  border: solid black;
+}
