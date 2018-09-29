@@ -78,17 +78,17 @@ request.onerror=e=>{
 }
 request.onupgradeneeded=e=>{
   var dbname=e.target.result;
-dbname.createObjectStore("cse",{keypath:"name"});
+dbname.createObjectStore("cse",{keypath:"roll"});
 
   console.log("upgraded....!");
 }
 request.onsuccess=e=>{
   var dbname=e.target.result;
-var store=dbname.transcation("cse","readwrite").objectStore("cse");
+var store=dbname.transacation("cse","readwrite").objectStore("cse");
   store.put(
     {
       "name":name,
-      "roll":rollno,
+      "roll":roll,
       "email":email,
       "co":co,
 
@@ -119,4 +119,7 @@ var store=dbname.transcation("cse","readwrite").objectStore("cse");
 }
 
 }
+localStorage.setItem("roll",rollno);
+window.open("resume.html","_self");
+
 }

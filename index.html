@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="ma.css">
+    <link rel="manifest" href="favicon/manifest.json">
   </head>
   <body>
     <form class="">
@@ -66,5 +67,14 @@ year of pass:<input type="text" name="yop" value="btechyop" id="btechyop">
   </body>
   <script type="text/javascript" src="idb.js">
 
+  </script>
+  <script>
+  if ('serviceWorker' in navigator){
+    navigator.serviceWorker.register("sw.js");
+  console.log("serviceWorker registered successfully..");
+  }
+  err=>{
+    console.log("error occured in sw");
+  }
   </script>
 </html>
